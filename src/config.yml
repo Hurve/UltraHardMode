@@ -1,0 +1,19 @@
+events:
+   charged-creepers: true
+   double-ender-dragon-health: true
+   custom-health: true
+   poison-from-food: true
+   skeletons-armor: true
+   skeletons-bow: true
+   zombies-armor: true
+   zombies-sword: true
+   spider-speed: true
+   skeletons-riding-horse: true
+   beds-explode: true
+general:
+   effects-on-without-challenge: false
+   custom-health-amount: 10
+   spider-speed-amount: 5
+   skeleton-bow-power: 2
+   
+   
