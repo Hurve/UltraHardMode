@@ -205,7 +205,7 @@ public class main extends JavaPlugin implements Listener {
 	
 @SuppressWarnings("deprecation")
 public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if (cmd.getName().equalsIgnoreCase("challenge")) {
+		if (cmd.getName().equalsIgnoreCase("challenge") && sender.hasPermission("UltraHard.challenge")) {
 			if (args.length == 1) {
 			try {
 				Integer.parseInt(args[0]);
