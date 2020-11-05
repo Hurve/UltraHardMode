@@ -632,6 +632,7 @@ public void createConfirm2Inv() {
 	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void respawnEvent(PlayerDeathEvent pre) {
+		if (this.getConfig().getBoolean("general.respawn-after-die") == false) {
 		if (challenge) {
 			Player player = (Player) pre.getEntity();
 			player.setGameMode(GameMode.SPECTATOR);
@@ -650,8 +651,9 @@ public void createConfirm2Inv() {
 				});
 			}
 			
+			}
 		}
-		}
+	}
 	
 	@SuppressWarnings("deprecation")
 	@EventHandler
