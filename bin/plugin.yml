@@ -1,0 +1,9 @@
+main: com.hcncompany.UltraHardMode.main
+name: UltraHardMode
+version: 1.0
+author: yummywaffle12
+api-version: 1.16
+
+commands:
+   challenge:
+   

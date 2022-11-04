@@ -218,7 +218,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String label, String
 						p.setGameMode(GameMode.SURVIVAL);
 						p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 10000, 10));
 						Bukkit.getScheduler ().runTaskLater (this, () -> p.sendMessage(ChatColor.GREEN + "Welcome to Ultra Hard Mode."), 0);
-						Bukkit.getScheduler ().runTaskLater (this, () -> p.sendMessage(ChatColor.GREEN + "If you die, you can't respawn. You loose if all players die. You win if you kill the ender dragon."), 60);
+						Bukkit.getScheduler ().runTaskLater (this, () -> p.sendMessage(ChatColor.GREEN + "If you die, you can't respawn. You lose if all players die. You win if you kill the ender dragon."), 60);
 						Bukkit.getScheduler ().runTaskLater (this, () -> p.sendMessage(ChatColor.GREEN + "Good Luck :)"), 120);
 						Bukkit.getScheduler ().runTaskLater (this, () -> p.removePotionEffect(PotionEffectType.SLOW), 160);
 						Bukkit.getScheduler ().runTaskLater (this, () -> p.removePotionEffect(PotionEffectType.BLINDNESS), 160);
@@ -244,7 +244,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String label, String
 				p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 10000, 10));
 				String length = args[0];
 				Bukkit.getScheduler ().runTaskLater (this, () -> p.sendMessage(ChatColor.GREEN + "Welcome to Ultra Hard Mode."), 0);
-				Bukkit.getScheduler ().runTaskLater (this, () -> p.sendMessage(ChatColor.GREEN + "If you die, you can't respawn. You loose if all players die. You win if you survive " + length + " Minecraft days."), 60);
+				Bukkit.getScheduler ().runTaskLater (this, () -> p.sendMessage(ChatColor.GREEN + "If you die, you can't respawn. You lose if all players die. You win if you survive " + length + " Minecraft days."), 60);
 				Bukkit.getScheduler ().runTaskLater (this, () -> p.sendMessage(ChatColor.GREEN + "Good Luck :)"), 120);
 				Bukkit.getScheduler ().runTaskLater (this, () -> p.removePotionEffect(PotionEffectType.SLOW), 160);
 				Bukkit.getScheduler ().runTaskLater (this, () -> p.removePotionEffect(PotionEffectType.BLINDNESS), 160);
@@ -319,51 +319,15 @@ public void onClick(InventoryClickEvent event) {
 	
 	
 	} else if (event.getView().getTitle().equalsIgnoreCase("Amount of Time")) {
-		
-		if (event.getSlot() == 0) {
-			event.setCancelled(true);
-			time = 1;
+		event.setCancelled(true);
+		if (event.getSlot() < 8) {
+			time = event.getSlot() + 1;
 			player.openInventory(inv3);
-		}
-		if (event.getSlot() == 1) {
-			event.setCancelled(true);
-			time = 2;
-			player.openInventory(inv3);
-		}
-		if (event.getSlot() == 2) {
-			event.setCancelled(true);
-			time = 3;
-			player.openInventory(inv3);
-		}
-		if (event.getSlot() == 3) {
-			event.setCancelled(true);
-			time = 4;
-			player.openInventory(inv3);
-		}
-		if (event.getSlot() == 4) {
-			event.setCancelled(true);
-			time = 5;
-			player.openInventory(inv3);
-		}
-		if (event.getSlot() == 5) {
-			event.setCancelled(true);
-			time = 6;
-			player.openInventory(inv3);
-		}
-		if (event.getSlot() == 6) {
-			event.setCancelled(true);
-			time = 7;
-			player.openInventory(inv3);
-		}
-		if (event.getSlot() == 7) {
-			event.setCancelled(true);
-			time = 8;
-			player.openInventory(inv3);
-		}
-		if (event.getSlot() == 8) {
-			event.setCancelled(true);
+		} else {
 			player.closeInventory();
 		}
+		
+
 	} else if (event.getView().getTitle().equals("Are you sure?")) {
 		if (event.getSlot() == 0) {
 			event.setCancelled(true);
@@ -374,7 +338,7 @@ public void onClick(InventoryClickEvent event) {
 				p.setGameMode(GameMode.SURVIVAL);
 				p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 10000, 10));
 				Bukkit.getScheduler ().runTaskLater (this, () -> p.sendMessage(ChatColor.GREEN + "Welcome to Ultra Hard Mode."), 0);
-				Bukkit.getScheduler ().runTaskLater (this, () -> p.sendMessage(ChatColor.GREEN + "If you die, you can't respawn. You loose if all players die. You win if you survive " + time + " Minecraft days."), 60);
+				Bukkit.getScheduler ().runTaskLater (this, () -> p.sendMessage(ChatColor.GREEN + "If you die, you can't respawn. You lose if all players die. You win if you survive " + time + " Minecraft days."), 60);
 				Bukkit.getScheduler ().runTaskLater (this, () -> p.sendMessage(ChatColor.GREEN + "Good Luck :)"), 120);
 				Bukkit.getScheduler ().runTaskLater (this, () -> p.removePotionEffect(PotionEffectType.SLOW), 160);
 				Bukkit.getScheduler ().runTaskLater (this, () -> p.removePotionEffect(PotionEffectType.BLINDNESS), 160);
@@ -419,7 +383,7 @@ public void onClick(InventoryClickEvent event) {
 				p.setGameMode(GameMode.SURVIVAL);
 				p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 10000, 10));
 				Bukkit.getScheduler ().runTaskLater (this, () -> p.sendMessage(ChatColor.GREEN + "Welcome to Ultra Hard Mode."), 0);
-				Bukkit.getScheduler ().runTaskLater (this, () -> p.sendMessage(ChatColor.GREEN + "If you die, you can't respawn. You loose if all players die. You win if you kill the ender dragon."), 60);
+				Bukkit.getScheduler ().runTaskLater (this, () -> p.sendMessage(ChatColor.GREEN + "If you die, you can't respawn. You lose if all players die. You win if you kill the ender dragon."), 60);
 				Bukkit.getScheduler ().runTaskLater (this, () -> p.sendMessage(ChatColor.GREEN + "Good Luck :)"), 120);
 				Bukkit.getScheduler ().runTaskLater (this, () -> p.removePotionEffect(PotionEffectType.SLOW), 160);
 				Bukkit.getScheduler ().runTaskLater (this, () -> p.removePotionEffect(PotionEffectType.BLINDNESS), 160);
@@ -467,7 +431,9 @@ public void createInv() {
 	// Beat the Game
 	timer.setType(Material.RED_WOOL);
 	meta.setDisplayName(ChatColor.RED + "Beat The Game");
+	lore.clear();
 	lore.add(ChatColor.GRAY + "Click to start a challenge to beat the game.");
+	meta.setLore(lore);
 	timer.setItemMeta(meta);
 	inv.setItem(1, timer);
 	
